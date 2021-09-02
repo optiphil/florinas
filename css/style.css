@@ -326,7 +326,14 @@ footer{
 }
 @media screen and (max-width:842px){
     .banner-text h1{
+        text-align: center;
         font-size: 25px;
+    }
+    .banner{
+        height: 120vh;
+    }
+    .banner-text h2{
+        margin-top: 35%;
     }
     .logo{
         margin: auto;
@@ -335,10 +342,16 @@ footer{
         margin-top: 1%;
        margin-left: 33%;
     }
+    .slide-container .slide img{
+        margin-left: -300%;
+        /* margin-top: 2%; */
+    }
      .banner-img{
-         height: 200px;
+         height: 150px;
          width: 200px;
-         margin-left: 30%;
+        margin-top: -3%;
+
+        margin-left:-90%;
      }
     .header-links{
         display: none;
