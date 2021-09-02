@@ -33,7 +33,32 @@
                 <div>CONTACT</div>
             </div> 
         </section>
-        <img src="./images/banner-img.jpg" class="banner-img" >
+        <div class="banner-img">
+            <div class="slide-container">
+                <div class="slide fade">
+                 <img src="./images/image-1.jpg" alt=''>
+               </div>
+               <div class="slide fade">
+                 <img src="./images/image-2.png" alt=''>
+               </div>
+               <div class="slide fade">
+                 <img src="./images/image-3.jpg" alt=''>
+               </div>
+               <div class="slide fade">
+                 <img src="./images/image-1.jpg" alt=''>
+               </div>
+         
+               <a href="#" class="prev" title="Previous">&#10094</a>
+               <a href="#" class="next" title="Next">&#10095</a>
+             </div>
+             <div class="dots-container">
+               <span class="dot"></span>
+               <span class="dot"></span>
+               <span class="dot"></span>
+               <span class="dot"></span>
+             </div>
+         
+        </div>
         <div class="banner-text">
             <h2>We are</h2>
             <h1>CREATIVE THINKERS</h1>
@@ -140,7 +165,7 @@
         </div>
         <div class="main-footer">
             <div class="icon-links">
-                <img src="./images/code.png" alt=""><img src="./images/friend.png" alt=""><img src="./images/graph.png" alt=""><img src="./images/comment.png" alt=""><img src="./images/pencil (2).png" alt="">
+                <img src="./images/facebook.png" alt=""><img src="./images/twitter.png" alt=""><img src="./images/linkedin (1).png" alt=""><img src="./images/instagram.png" alt=""><img src="./images/google.png" alt="">
             </div>
             <div class="input-box">
                 <input type="text" placeholder="subscribe to our newsletters">
@@ -154,7 +179,45 @@
             <p>Made With hardwork by #optimisticphilip</p>
         </div>
     </footer>
+   
     <script>
+        var currentSlide = 0;
+const slides = document.querySelectorAll(".slide")
+const dots = document.querySelectorAll('.dot')
+
+const init = (n) => {
+  slides.forEach((slide) => {
+    slide.style.display = "none"
+    dots.forEach((dot) => {
+      dot.classList.remove("active")
+    })
+  })
+  slides[n].style.display = "block"
+  dots[n].classList.add("active")
+}
+document.addEventListener("DOMContentLoaded", init(currentSlide))
+const next = () => {
+  currentSlide >= slides.length - 1 ? currentSlide = 0 : currentSlide++
+  init(currentSlide)
+}
+
+const prev = () => {
+  currentSlide <= 0 ? currentSlide = slides.length - 1 : currentSlide--
+  init(currentSlide)
+}
+
+document.querySelector(".next").addEventListener('click', next)
+document.querySelector(".prev").addEventListener('click', prev)
+setInterval(() => {
+  next()
+}, 5000);
+
+dots.forEach((dot, index) => {
+  dot.addEventListener("click", () => {
+    init(index)
+    currentSlide = i
+  })
+})
         const menu = document.querySelector(".header-links")
 const button = document.querySelector(".menuBtn")
 let navigate = false
