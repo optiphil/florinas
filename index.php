@@ -36,16 +36,16 @@
         <div class="banner-img">
             <div class="slide-container">
                 <div class="slide fade">
-                 <img src="./images/image-1.jpg" alt=''>
+                 <img src="./images/banner-img.jpg" alt=''>
+               </div>
+               <div class="slide fade">
+                 <img src="./images/image-1.png" alt=''>
                </div>
                <div class="slide fade">
                  <img src="./images/image-2.png" alt=''>
                </div>
                <div class="slide fade">
-                 <img src="./images/image-3.jpg" alt=''>
-               </div>
-               <div class="slide fade">
-                 <img src="./images/image-1.jpg" alt=''>
+                 <img src="./images/image-3.png" alt=''>
                </div>
          
                <a href="#" class="prev" title="Previous">&#10094</a>
