@@ -51,7 +51,7 @@
     font-weight: 800;
     font-family: sans-serif;
     margin-left: 18%;
-    margin-top: -2%;
+    margin-top: 4%;
 }
 .banner-logo2{
     height: 150px;
@@ -266,7 +266,7 @@ footer{
     background-color: rgba(255, 255, 255, 0.459);
     width: 40px;
     height: 40px;
-    padding: 5px;
+    padding: 2%;
     margin: 1%;
 }
 .input-box{
@@ -418,4 +418,66 @@ footer{
         padding-left: 45%;
         font-size: 20px;
     }
+}
+@keyframes fade {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  
+  .slide-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+    margin: auto;
+    position: relative;
+  }
+  
+  .slide-container .slide {
+    display: none;
+    width: 100%;
+  }
+  
+  .slide-container .slide.fade {
+    animation: fade 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  }
+  
+  .slide-container .slide img {
+    width: 500px;
+    margin-top: 5%;
+  }
+  .slide-container .prev,
+.slide-container .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  /* margin-top: -22px; */
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: all 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.slide-container .prev:hover,
+.slide-container .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+.slide-container .prev {
+  left: 2px;
+}
+
+.slide-container .next {
+  right: 2px;
 }
